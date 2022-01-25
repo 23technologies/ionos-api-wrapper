@@ -18,7 +18,7 @@ limitations under the License.
 package pkg
 
 import (
-	ionossdk "github.com/ionos-cloud/sdk-go/v5"
+	ionossdk "github.com/ionos-cloud/sdk-go/v6"
 )
 
 var singletons = make(map[string]*ionossdk.APIClient)

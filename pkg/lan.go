@@ -24,7 +24,7 @@ import (
 	"net"
 	"strconv"
 
-	ionossdk "github.com/ionos-cloud/sdk-go/v5"
+	ionossdk "github.com/ionos-cloud/sdk-go/v6"
 )
 
 // nicConfiguration is a struct to provide configuration values for new NICs

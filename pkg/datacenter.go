@@ -22,7 +22,7 @@ import (
 	"errors"
 	"time"
 
-	ionossdk "github.com/ionos-cloud/sdk-go/v5"
+	ionossdk "github.com/ionos-cloud/sdk-go/v6"
 )
 
 // AddLabelToDatacenter adds a label to the server ID given
