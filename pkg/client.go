@@ -33,7 +33,7 @@ func GetClientForUser(user, password string) *ionossdk.APIClient {
 	client, ok := singletons[user]
 
 	if !ok {
-		config := ionossdk.NewConfiguration(user, password, "")
+		config := ionossdk.NewConfiguration(user, password, "", "")
 		client = ionossdk.NewAPIClient(config)
 	}
 

@@ -40,8 +40,8 @@ func AddLabelToServer(ctx context.Context, client *ionossdk.APIClient, datacente
 		Value: &value,
 	}
 
-	labelApiCreateRequest := client.LabelApi.DatacentersServersLabelsPost(ctx, datacenterID, id).Depth(0)
-	_, _, err := labelApiCreateRequest.Label(ionossdk.LabelResource{Properties: &labelProperties}).Execute()
+	labelsApiCreateRequest := client.LabelsApi.DatacentersServersLabelsPost(ctx, datacenterID, id).Depth(0)
+	_, _, err := labelsApiCreateRequest.Label(ionossdk.LabelResource{Properties: &labelProperties}).Execute()
 	if nil != err {
 		return err
 	}
@@ -74,7 +74,7 @@ func WaitForServerModificationsAndGetResult(ctx context.Context, client *ionossd
 	tryCount := 0
 
 	for repeat {
-		serverResult, httpResponse, err := client.ServerApi.DatacentersServersFindById(ctx, datacenterID, id).Depth(0).Execute()
+		serverResult, httpResponse, err := client.ServersApi.DatacentersServersFindById(ctx, datacenterID, id).Depth(0).Execute()
 
 		if nil == httpResponse || 404 != httpResponse.StatusCode {
 			if nil != err {
